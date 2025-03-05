@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/register.css')}}">
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="">inicio</a></li>
+            <li><a href="">productos</a></li>
+            <li><a href="">informacion</a></li>
+        </ul>
+    </header>
+    <div class="formulario">
+        <h1>register</h1>
+        <form action="/registrarse" method="post">
+            <input type="text" required placeholder="usuario" name="usuario" value="{{usuarios}}"><br>
+            <div class="mensajes">{{mensaje1}}</div>
+            <input type="number" required placeholder="celular" name="celular" value="{{celulares}}"><br>
+            <input type="correo" required placeholder="correo" name ="email" value="{{correos}}"><br>
+            <input type="password" required placeholder="contraseña" name="contraseña" value="{{contraseñas}}"><br>
+            <input type="text" required placeholder=" confirmar contraseña" name="confirmacion"><br>
+            <div class="mensajes">{{mensaje2}}</div>
+            <div class="boton">
+                <button>register</button>
+            </div>
+            <a href="/login">login</a>
+        </form>
+    </div>
+    <footer>
+        <ul>
+            <li class="pie">juan sebastian loaiza</li>
+            <li class="pie">2025</li>
+        </ul>
+    </footer>
+</body>
+</html>
